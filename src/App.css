@@ -1,38 +1,141 @@
-.App {
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1,
+h2 {
   text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+  max-width: 300px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: #45a049;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Input Name Section */
+.input-name-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+input[type="text"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Pitanja u kvizu - crna boja teksta */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.question-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #000;
+}
+
+.question-container button {
+  margin: 5px auto;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #4caf50;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.question-container button.correct {
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.question-container button.wrong {
+  background-color: red;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Reset Section - centriranje */
+.reset-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reset-container button {
+  background-color: #ff5722;
+  border: none;
+  color: white;
+  width: auto;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+.reset-container button:hover {
+  background-color: #e64a19;
+}
+
+h3 {
+  text-align: center;
 }
